@@ -1,0 +1,12 @@
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\bin\Debug\net6.0\LoggerService.deps.json
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\bin\Debug\net6.0\LoggerService.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\bin\Debug\net6.0\ref\LoggerService.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\bin\Debug\net6.0\LoggerService.pdb
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.AssemblyInfoInputs.cache
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.AssemblyInfo.cs
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\ref\LoggerService.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.pdb
+D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.csproj.AssemblyReference.cache

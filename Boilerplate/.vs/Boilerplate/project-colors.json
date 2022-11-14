@@ -5,7 +5,12 @@
       "ProjectGuid": "558c3d4d-2622-4014-82bc-0799cb7aa3b0",
       "DisplayName": "api",
       "ColorIndex": 0
+    },
+    "dce4d203-7988-43d2-b07c-24ccd124a827": {
+      "ProjectGuid": "dce4d203-7988-43d2-b07c-24ccd124a827",
+      "DisplayName": "LoggerService",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

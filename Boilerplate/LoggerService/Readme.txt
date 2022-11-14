@@ -1,0 +1,1 @@
+﻿there is a file called ( nlog.config ) in the main project that we need to log msgs from it contains all config for logging file
