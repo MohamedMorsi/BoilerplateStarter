@@ -3,6 +3,7 @@ using Entities.Dtos;
 using Entities.Models;
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Repositories.Contracts;
 
 namespace api.Controllers
@@ -39,6 +40,36 @@ namespace api.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpGet]
+        public IActionResult GetOwnersWithPaging([FromQuery] PagingParameters pagingParameters)
+        {
+            try
+            {
+                var owners = _repository.Owner.GetOwnersWithPaging(pagingParameters);
+                var metadata = new
+                {
+                    owners.TotalCount,
+                    owners.PageSize,
+                    owners.CurrentPage,
+                    owners.TotalPages,
+                    owners.HasNext,
+                    owners.HasPrevious
+                };
+                Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(metadata));
+
+                _logger.LogInfo($"Returned {owners.TotalCount} owners from database.");
+
+                var ownersResult = _mapper.Map<IEnumerable<OwnerDto>>(owners);
+                return Ok(ownersResult);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside GetOwnersWithPaging action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
 
         [HttpGet("{id}", Name = "OwnerById")]
         public IActionResult GetOwnerById(Guid id)

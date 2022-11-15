@@ -589,6 +589,15 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "NLog/5.0.5": {
         "type": "package",
         "compile": {
@@ -2155,6 +2164,33 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "NLog/5.0.5": {
       "sha512": "NOTWSyUEljmjMq7OqZ1X9iu4bJ+rW/o6pt79Jq8j2Q7s8DyoMMCJwe0HoCKcNjhYRJ++b+E8erH6E6WwaCTshQ==",
       "type": "package",
@@ -3681,6 +3717,7 @@
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0",
+      "Newtonsoft.Json >= 13.0.1",
       "Repositories >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -3756,6 +3793,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

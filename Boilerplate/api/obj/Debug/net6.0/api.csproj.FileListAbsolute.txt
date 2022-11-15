@@ -90,3 +90,4 @@ D:\me\Project AAA\Boilerplate\Boilerplate\api\obj\Debug\net6.0\api.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\api\obj\Debug\net6.0\ref\api.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\api\obj\Debug\net6.0\api.pdb
 D:\me\Project AAA\Boilerplate\Boilerplate\api\obj\Debug\net6.0\api.genruntimeconfig.cache
+D:\me\Project AAA\Boilerplate\Boilerplate\api\bin\Debug\net6.0\Newtonsoft.Json.dll

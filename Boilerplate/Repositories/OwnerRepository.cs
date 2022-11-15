@@ -24,6 +24,13 @@ namespace Repositories
                 .ToList();
         }
 
+        public PagedList<Owner> GetOwnersWithPaging(PagingParameters pagingParameters)
+        {
+            return PagedList<Owner>.ToPagedList(FindAll().OrderBy(on => on.Name),
+                    pagingParameters.PageNumber,
+                    pagingParameters.PageSize);
+        }
+
         public Owner GetOwnerById(Guid ownerId)
         {
             return FindByCondition(owner => owner.Id.Equals(ownerId))

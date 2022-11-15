@@ -10,6 +10,7 @@ namespace Repositories.Contracts
     public interface IOwnerRepository : IRepositoryBase<Owner>
     {
         IEnumerable<Owner> GetAllOwners();
+        PagedList<Owner> GetOwnersWithPaging(PagingParameters pagingParameters);
         Owner GetOwnerById(Guid ownerId);
         Owner GetOwnerWithDetails(Guid ownerId);
         void CreateOwner(Owner owner);

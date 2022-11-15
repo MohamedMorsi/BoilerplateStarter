@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WtxOsi1vjLQqo7gqLwLAlnfriRILcyTdnBZtHbYymxd4oSulb9C7kzCBT7Nn81h3nedrnUaDIsbvaa5wnggn8g==",
+  "dgSpecHash": "6d4vjD6tgOCX+Zqo7jGvCFlsKujnxSma37P3ChMnrnNVDDk8GAo3Zu2cJxq1TomSVJ4CJuNZ+TcNviS3l6rWug==",
   "success": true,
   "projectFilePath": "D:\\me\\Project AAA\\Boilerplate\\Boilerplate\\api\\api.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,7 @@
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\nlog\\5.0.5\\nlog.5.0.5.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\nlog.extensions.logging\\5.1.0\\nlog.extensions.logging.5.1.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
