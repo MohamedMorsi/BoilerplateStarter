@@ -41,7 +41,7 @@ namespace Repositories.Helpers
 
             var orderQuery = orderQueryBuilder.ToString().TrimEnd(',', ' ');
 
-            //return entities.OrderBy(orderQuery); //error with using 
+            //return entities.OrderBy(orderQuery); //error with using  LINQ Dynamic Query Library,
             return entities;
         }
     }

@@ -119,7 +119,7 @@ namespace Repositories
                 return;
             }
 
-            //owners = owners.OrderBy(orderQuery);
+            //owners = owners.OrderBy(orderQuery);  error in LINQ Dynamic Query Library,
         }
     }
 }
