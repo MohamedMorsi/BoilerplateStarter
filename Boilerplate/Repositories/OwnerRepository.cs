@@ -24,11 +24,15 @@ namespace Repositories
                 .ToList();
         }
 
-        public PagedList<Owner> GetOwnersWithPaging(PagingParameters pagingParameters)
+        public PagedList<Owner> GetOwnersWithPagingAndFiltering(OwnerParameters ownerParameters)
         {
-            return PagedList<Owner>.ToPagedList(FindAll().OrderBy(on => on.Name),
-                    pagingParameters.PageNumber,
-                    pagingParameters.PageSize);
+            var owners = FindByCondition(o => o.DateOfBirth.Year >= ownerParameters.MinYearOfBirth &&
+                               o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth)
+                           .OrderBy(on => on.Name);
+
+            return PagedList<Owner>.ToPagedList(owners,
+                    ownerParameters.PageNumber,
+                    ownerParameters.PageSize);
         }
 
         public Owner GetOwnerById(Guid ownerId)
