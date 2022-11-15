@@ -42,7 +42,7 @@ namespace api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetOwnersWithPagingAndFiltering([FromQuery] OwnerParameters ownerParameters)
+        public IActionResult GetOwnersWithPagingAndFilteringAndSorting([FromQuery] OwnerParameters ownerParameters)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace api.Controllers
                     return BadRequest("Max year of birth cannot be less than min year of birth");
                 }
 
-                var owners = _repository.Owner.GetOwnersWithPagingAndFiltering(ownerParameters);
+                var owners = _repository.Owner.GetOwnersWithPagingAndFilteringAndSorting(ownerParameters);
                 var metadata = new
                 {
                     owners.TotalCount,

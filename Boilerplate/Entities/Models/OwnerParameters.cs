@@ -8,6 +8,10 @@ namespace Entities.Models
 {
     public class OwnerParameters : PagingParameters
     {
+        public OwnerParameters()
+        {
+            OrderBy = "name";
+        }
         public uint MinYearOfBirth { get; set; }
         public uint MaxYearOfBirth { get; set; } = (uint)DateTime.Now.Year;
 

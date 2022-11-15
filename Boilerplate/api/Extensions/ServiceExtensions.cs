@@ -1,8 +1,10 @@
 ﻿using Entities;
+using Entities.Models;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
+using Repositories.Helpers;
 
 namespace api.Extensions
 {
@@ -32,6 +34,9 @@ namespace api.Extensions
         //configure RepositoryWrapper
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
         {
+            services.AddScoped<ISortHelper<Owner>, SortHelper<Owner>>();
+            services.AddScoped<ISortHelper<Account>, SortHelper<Account>>();
+
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }
         #endregion

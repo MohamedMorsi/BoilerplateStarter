@@ -1,5 +1,7 @@
 ﻿using Entities;
+using Entities.Models;
 using Repositories.Contracts;
+using Repositories.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +16,14 @@ namespace Repositories
         private IOwnerRepository _owner;
         private IAccountRepository _account;
 
-        public RepositoryWrapper(RepositoryContext repositoryContext)
+        private ISortHelper<Owner> _ownerSortHelper;
+        private ISortHelper<Account> _accountSortHelper;
+
+        public RepositoryWrapper(RepositoryContext repositoryContext, SortHelper<Owner> ownerSortHelper, ISortHelper<Account> accountSortHelper)
         {
             _repoContext = repositoryContext;
+            _ownerSortHelper = ownerSortHelper;
+            _accountSortHelper = accountSortHelper;
         }
 
         public IOwnerRepository Owner
@@ -25,7 +32,7 @@ namespace Repositories
             {
                 if (_owner == null)
                 {
-                    _owner = new OwnerRepository(_repoContext);
+                    _owner = new OwnerRepository(_repoContext, _ownerSortHelper);
                 }
                 return _owner;
             }
@@ -36,7 +43,7 @@ namespace Repositories
             {
                 if (_account == null)
                 {
-                    _account = new AccountRepository(_repoContext);
+                    _account = new AccountRepository(_repoContext, _accountSortHelper);
                 }
                 return _account;
             }
