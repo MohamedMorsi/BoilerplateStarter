@@ -8,6 +8,7 @@ namespace api.Extensions
 {
     public static class ServiceExtensions
     {
+        #region configure SqlServer Connectionstring and DbContext
         //configure SqlServer Connectionstring and DbContext
         public static void ConfigureSqlServerContext(this IServiceCollection services, IConfiguration config)
         {
@@ -15,6 +16,7 @@ namespace api.Extensions
             services.AddDbContext<RepositoryContext>(options => options.UseSqlServer(connectionString,
              b => b.MigrationsAssembly(typeof(RepositoryContext).Assembly.FullName)));
         }
+        #endregion
 
         #region configure MySql Connectionstring and DbContext
         ////configure MySql Connectionstring and DbContext
@@ -26,14 +28,15 @@ namespace api.Extensions
         //}
         #endregion
 
-
+        #region configure RepositoryWrapper
         //configure RepositoryWrapper
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
         {
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }
+        #endregion
 
-
+        #region configure CORS
         //configure CORS
         public static void ConfigureCors(this IServiceCollection services)
         {
@@ -45,13 +48,17 @@ namespace api.Extensions
                     .AllowAnyHeader());
             });
         }
+        #endregion
 
+        #region configure LoggerService
         //configure LoggerService
         public static void ConfigureLoggerService(this IServiceCollection services)
         {
             services.AddSingleton<ILoggerManager, LoggerManager>();
         }
+        #endregion
 
+        #region ConfigureIIS
         //ConfigureIIS
         public static void ConfigureIISIntegration(this IServiceCollection services)
         {
@@ -60,10 +67,9 @@ namespace api.Extensions
 
             });
         }
+        #endregion
 
 
     }
-
-
 
 }

@@ -14,6 +14,9 @@ builder.Services.ConfigureSqlServerContext(builder.Configuration);
 //Repositories
 builder.Services.ConfigureRepositoryWrapper();
 
+//AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+
 // Add services to the container.
 builder.Services.ConfigureCors(); // there is another config blow
 

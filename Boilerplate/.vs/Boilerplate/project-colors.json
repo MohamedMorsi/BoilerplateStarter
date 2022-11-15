@@ -10,7 +10,27 @@
       "ProjectGuid": "dce4d203-7988-43d2-b07c-24ccd124a827",
       "DisplayName": "LoggerService",
       "ColorIndex": 1
+    },
+    "585906cd-bfa2-4875-ada4-bc01ed680aa5": {
+      "ProjectGuid": "585906cd-bfa2-4875-ada4-bc01ed680aa5",
+      "DisplayName": "Contracts",
+      "ColorIndex": 2
+    },
+    "57f8146d-f7e5-4f5b-816e-fb8d65bcd024": {
+      "ProjectGuid": "57f8146d-f7e5-4f5b-816e-fb8d65bcd024",
+      "DisplayName": "Entities",
+      "ColorIndex": 3
+    },
+    "b6c0ee18-a632-4543-b084-889d162508de": {
+      "ProjectGuid": "b6c0ee18-a632-4543-b084-889d162508de",
+      "DisplayName": "Repositories",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 5
 }

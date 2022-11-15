@@ -13,6 +13,12 @@ namespace Repositories
         private RepositoryContext _repoContext;
         private IOwnerRepository _owner;
         private IAccountRepository _account;
+
+        public RepositoryWrapper(RepositoryContext repositoryContext)
+        {
+            _repoContext = repositoryContext;
+        }
+
         public IOwnerRepository Owner
         {
             get
@@ -34,11 +40,6 @@ namespace Repositories
                 }
                 return _account;
             }
-        }
-
-        public RepositoryWrapper(RepositoryContext repositoryContext)
-        {
-            _repoContext = repositoryContext;
         }
 
         public void Save()
