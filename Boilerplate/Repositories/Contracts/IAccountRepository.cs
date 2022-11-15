@@ -9,5 +9,6 @@ namespace Repositories.Contracts
 {
     public interface IAccountRepository : IRepositoryBase<Account>
     {
+        IEnumerable<Account> AccountsByOwner(Guid ownerId);
     }
 }
