@@ -3,6 +3,7 @@ D:\me\Project AAA\Boilerplate\Boilerplate\Entities\bin\Debug\net6.0\Entities.run
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\bin\Debug\net6.0\Entities.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\bin\Debug\net6.0\ref\Entities.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\bin\Debug\net6.0\Entities.pdb
+D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
@@ -11,4 +12,3 @@ D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\ref\Entities.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.pdb
 D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.genruntimeconfig.cache
-D:\me\Project AAA\Boilerplate\Boilerplate\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
