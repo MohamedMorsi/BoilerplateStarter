@@ -1,10 +1,11 @@
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Contracts;
 
 namespace api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -16,16 +17,20 @@ namespace api.Controllers
         //using defult logger
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, ILoggerManager nlog)
+        private IRepositoryWrapper _repository;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, ILoggerManager nlog,
+            IRepositoryWrapper repository)
         {
             _logger = logger;
             _nlog = nlog;
+            _repository = repository;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-           
+           //logging
             _nlog.LogInfo("Here is info message from the controller.");
             _nlog.LogDebug("Here is debug message from the controller.");
             _nlog.LogWarn("Here is warn message from the controller.");
@@ -39,6 +44,14 @@ namespace api.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet(Name = "GetAccounts")]
+        public IEnumerable<string> GetAccounts()
+        {
+            var domesticAccounts = _repository.Account.FindByCondition(x => x.AccountType.Equals("Domestic"));
+            var owners = _repository.Owner.FindAll();
+            return new string[] { "value1", "value2" };
         }
     }
 }

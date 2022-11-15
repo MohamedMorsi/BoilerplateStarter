@@ -8,8 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 builder.Services.ConfigureLoggerService();
 
+//ApplicationDbContext
+builder.Services.ConfigureSqlServerContext(builder.Configuration);
+
+//Repositories
+builder.Services.ConfigureRepositoryWrapper();
+
 // Add services to the container.
-builder.Services.ConfigureCors();
+builder.Services.ConfigureCors(); // there is another config blow
+
+//ConfigureIIS
 builder.Services.ConfigureIISIntegration();
 
 builder.Services.AddControllers();

@@ -9,4 +9,3 @@ D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerS
 D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\ref\LoggerService.dll
 D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.pdb
-D:\me\Project AAA\Boilerplate\Boilerplate\LoggerService\obj\Debug\net6.0\LoggerService.csproj.AssemblyReference.cache

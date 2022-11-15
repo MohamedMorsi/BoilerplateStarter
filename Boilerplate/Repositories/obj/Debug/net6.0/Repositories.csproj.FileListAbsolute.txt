@@ -1,0 +1,15 @@
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\bin\Debug\net6.0\Repositories.deps.json
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\bin\Debug\net6.0\Repositories.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\bin\Debug\net6.0\ref\Repositories.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\bin\Debug\net6.0\Repositories.pdb
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\bin\Debug\net6.0\Entities.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\bin\Debug\net6.0\Entities.pdb
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\ref\Repositories.dll
+D:\me\Project AAA\Boilerplate\Boilerplate\Repositories\obj\Debug\net6.0\Repositories.pdb
