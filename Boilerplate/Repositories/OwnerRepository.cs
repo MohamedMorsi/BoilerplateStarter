@@ -29,10 +29,18 @@ namespace Repositories
             var owners = FindByCondition(o => o.DateOfBirth.Year >= ownerParameters.MinYearOfBirth &&
                                o.DateOfBirth.Year <= ownerParameters.MaxYearOfBirth)
                            .OrderBy(on => on.Name);
+            SearchByName(ref owners, ownerParameters.Name);
 
             return PagedList<Owner>.ToPagedList(owners,
                     ownerParameters.PageNumber,
                     ownerParameters.PageSize);
+        }
+
+        private void SearchByName(ref IOrderedQueryable<Owner> owners, string ownerName)
+        {
+            if (!owners.Any() || string.IsNullOrWhiteSpace(ownerName))
+                return;
+            owners = owners.Where(o => o.Name.ToLower().Contains(ownerName.Trim().ToLower())).OrderBy(on => on.Name);
         }
 
         public Owner GetOwnerById(Guid ownerId)
