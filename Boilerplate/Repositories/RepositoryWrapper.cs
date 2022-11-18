@@ -19,11 +19,11 @@ namespace Repositories
         private ISortHelper<Owner> _ownerSortHelper;
         private ISortHelper<Account> _accountSortHelper;
 
-        public RepositoryWrapper(RepositoryContext repositoryContext, SortHelper<Owner> ownerSortHelper, ISortHelper<Account> accountSortHelper)
+        public RepositoryWrapper(RepositoryContext repositoryContext)
         {
             _repoContext = repositoryContext;
-            _ownerSortHelper = ownerSortHelper;
-            _accountSortHelper = accountSortHelper;
+            _ownerSortHelper = new SortHelper<Owner>();
+            _accountSortHelper = new SortHelper<Account>();
         }
 
         public IOwnerRepository Owner

@@ -34,8 +34,9 @@ namespace api.Extensions
         //configure RepositoryWrapper
         public static void ConfigureRepositoryWrapper(this IServiceCollection services)
         {
-            services.AddScoped<ISortHelper<Owner>, SortHelper<Owner>>();
-            services.AddScoped<ISortHelper<Account>, SortHelper<Account>>();
+            //services.AddScoped<ISortHelper<Owner>, SortHelper<Owner>>();
+            //services.AddScoped<ISortHelper<Account>, SortHelper<Account>>();
+            services.AddScoped(typeof(ISortHelper<>), typeof(SortHelper<>));
 
             services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
         }
