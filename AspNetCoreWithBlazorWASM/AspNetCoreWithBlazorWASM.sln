@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6D9D8AD3-126C-4D63-BCB8-44D3EDE55E06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C7390EB2-15D4-4F02-BDE1-35AFFDA89B4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "..\Boilerplate\api\api.csproj", "{971F49E1-3AF9-463A-B34A-8B81F9DAB851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WASM.Web", "WASM.Web\WASM.Web.csproj", "{9EB63669-F752-45AA-9043-247A171D6EB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{971F49E1-3AF9-463A-B34A-8B81F9DAB851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971F49E1-3AF9-463A-B34A-8B81F9DAB851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971F49E1-3AF9-463A-B34A-8B81F9DAB851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971F49E1-3AF9-463A-B34A-8B81F9DAB851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB63669-F752-45AA-9043-247A171D6EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB63669-F752-45AA-9043-247A171D6EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB63669-F752-45AA-9043-247A171D6EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB63669-F752-45AA-9043-247A171D6EB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{971F49E1-3AF9-463A-B34A-8B81F9DAB851} = {6D9D8AD3-126C-4D63-BCB8-44D3EDE55E06}
+		{9EB63669-F752-45AA-9043-247A171D6EB0} = {C7390EB2-15D4-4F02-BDE1-35AFFDA89B4E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F32CD96D-808E-46E9-8FB5-FE743D24D38B}
+	EndGlobalSection
+EndGlobal
