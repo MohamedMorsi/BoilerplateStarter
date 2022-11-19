@@ -31,6 +31,8 @@ builder.Services.AddSingleton<IValidateOptions<TitleConfiguration>, TitleConfigu
 #endregion
 
 
+//from EduO
+
 //Configure Nlog and loggerService.
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 builder.Services.ConfigureLoggerService();
