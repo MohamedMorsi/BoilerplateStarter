@@ -1,8 +1,13 @@
+using api.Configurations;
 using api.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.Extensions.Configuration;
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Configure IOption Pattern
+builder.Services.Configure<TitleConfiguration>(builder.Configuration.GetSection("Pages:HomePage"));
 
 //Configure Nlog and loggerService.
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));

@@ -2,6 +2,7 @@ using api.Configurations;
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Repositories.Contracts;
 
 namespace api.Controllers
@@ -21,17 +22,25 @@ namespace api.Controllers
 
         //using IConfiguration
         private readonly IConfiguration _configuration;
+        private readonly TitleConfiguration _homePageTitleConfiguration;
+
 
         private IRepositoryWrapper _repository;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger, ILoggerManager nlog,
             IRepositoryWrapper repository,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            IOptions<TitleConfiguration> homePageTitleConfiguration
+            //IOptionsSnapshot<T>  to use Ioption object as scoped service to config the object change in runtime //to Read the Updated Configuration 
+            //IOptionsSnapshot is not suitable to be injected into services registered as a singleton in our application.
+            //IOptionsMonitor  for Singleton Services
+            )
         {
             _logger = logger;
             _nlog = nlog;
             _repository = repository;
             _configuration = configuration;
+            _homePageTitleConfiguration = homePageTitleConfiguration.Value;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -53,7 +62,9 @@ namespace api.Controllers
             //Or using Bind to object 
             var ConfigObject = new ConfigurationDataObject();
             _configuration.Bind("Logging:LogLevel", ConfigObject);
-
+            //Or using IOption interface 
+            //thier is implementation in Program.cs file 
+            var ConfigObject1 = _homePageTitleConfiguration;
 
             //==================================================================================
 
