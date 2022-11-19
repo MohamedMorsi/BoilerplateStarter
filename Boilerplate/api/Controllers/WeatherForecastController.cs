@@ -1,5 +1,7 @@
+using api.Configurations;
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Repositories.Contracts;
 
 namespace api.Controllers
@@ -17,14 +19,19 @@ namespace api.Controllers
         //using defult logger
         private readonly ILogger<WeatherForecastController> _logger;
 
+        //using IConfiguration
+        private readonly IConfiguration _configuration;
+
         private IRepositoryWrapper _repository;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger, ILoggerManager nlog,
-            IRepositoryWrapper repository)
+            IRepositoryWrapper repository,
+            IConfiguration configuration)
         {
             _logger = logger;
             _nlog = nlog;
             _repository = repository;
+            _configuration = configuration;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
@@ -36,6 +43,19 @@ namespace api.Controllers
             _nlog.LogWarn("Here is warn message from the controller.");
             _nlog.LogError("Here is error message from the controller.");
 
+            //==================================================================================
+            //using _configuration from appsitting 
+            //recommend binding the config data to strongly type object to figure and validate it 
+            var DefaultLogLevel = _configuration.GetValue<string>("Logging:LogLevel:Default");
+            //or
+            var logLevelSection = _configuration.GetSection("Logging:LogLevel");
+            var DefaultLogLevel1 = logLevelSection.GetValue<string>("Default");
+            //Or using Bind to object 
+            var ConfigObject = new ConfigurationDataObject();
+            _configuration.Bind("Logging:LogLevel", ConfigObject);
+
+
+            //==================================================================================
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -45,7 +65,8 @@ namespace api.Controllers
             })
             .ToArray();
         }
-
+        //==================================================================================
+        //for test the api
         [HttpGet(Name = "GetAccounts")]
         public IEnumerable<string> GetAccounts()
         {
