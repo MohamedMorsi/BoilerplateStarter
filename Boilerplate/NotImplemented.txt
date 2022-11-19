@@ -1,0 +1,7 @@
+How to Implement Sorting in ASP.NET Core Web API
+Data Shaping in ASP.NET Core Web API
+Implementing HATEOAS in ASP.NET Core Web API
+ASP.NET Core Configuration – Configuration Providers
+Creating Custom Configuration Provider in ASP.NET Core
+Securing Sensitive Data Locally in ASP.NET Core
+ASP.NET Core Configuration – Azure Key Vault

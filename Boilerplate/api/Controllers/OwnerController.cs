@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Entities.Dtos;
+using Dtos;
 using Entities.Models;
 using LoggerService;
 using Microsoft.AspNetCore.Mvc;

@@ -7,9 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{DCE4D203-7988-43D2-B07C-24CCD124A827}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{57F8146D-F7E5-4F5B-816E-FB8D65BCD024}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{57F8146D-F7E5-4F5B-816E-FB8D65BCD024}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{B6C0EE18-A632-4543-B084-889D162508DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{B6C0EE18-A632-4543-B084-889D162508DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E7CA28FD-8ADE-4786-9908-247F735439F0}"
+	ProjectSection(SolutionItems) = preProject
+		NotImplemented.txt = NotImplemented.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtos", "Dtos\Dtos.csproj", "{F7E92103-52A5-44E1-A821-0AC41FD717E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +40,10 @@ Global
 		{B6C0EE18-A632-4543-B084-889D162508DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C0EE18-A632-4543-B084-889D162508DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C0EE18-A632-4543-B084-889D162508DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E92103-52A5-44E1-A821-0AC41FD717E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E92103-52A5-44E1-A821-0AC41FD717E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E92103-52A5-44E1-A821-0AC41FD717E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E92103-52A5-44E1-A821-0AC41FD717E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
