@@ -2,12 +2,34 @@ using api.Configurations;
 using api.Extensions;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Configure IOption Pattern
+#region nfigure IOption Pattern
+
+//Configurtion IOption Pattern
 builder.Services.Configure<TitleConfiguration>(builder.Configuration.GetSection("Pages:HomePage"));
+
+
+// the same but with validation 
+builder.Services.AddOptions<TitleConfiguration>()
+    .Bind(builder.Configuration.GetSection("Pages:HomePage"))
+    .ValidateDataAnnotations()  //Options Validation using DataAnnotations
+    .Validate(config =>   //Options Validation using Delegates
+    {
+         if (string.IsNullOrEmpty(config.WelcomeMessage) || config.WelcomeMessage.Length > 60)
+             return false;
+         return true;
+     }, "Welcome message must be defined and it must be less than 60 characters long.");
+
+
+// the same but Complex Validation Scenarios with IValidateOptions
+builder.Services.AddSingleton<IValidateOptions<TitleConfiguration>, TitleConfigurationValidation>();
+
+#endregion
+
 
 //Configure Nlog and loggerService.
 LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
